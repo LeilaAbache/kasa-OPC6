@@ -10,7 +10,9 @@ const Card = (logement) => {
           search: "?_id=" + logement.card.id,
         }}
       >
-        <img src={logement.card.cover} alt={logement.card.title} />
+        <div className="card-image">
+          <img src={logement.card.cover} alt={logement.card.title} />
+        </div>
         <div className="card-name">
           <h2>{logement.card.title}</h2>
         </div>

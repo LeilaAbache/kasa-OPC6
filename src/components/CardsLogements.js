@@ -11,7 +11,7 @@ const CardsLogements = () => {
   }, []);
 
   return (
-    <div>
+    <div className="card-container">
       {data.map((logement) => (
         <Card key={logement.id} card={logement} />
       ))}

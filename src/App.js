@@ -4,6 +4,7 @@ import About from "./pages/About";
 import Erreur404 from "./pages/Erreur404";
 import FicheLogement from "./pages/FicheLogement";
 import Home from "./pages/Home";
+import "../src/styles/style.css";
 
 const App = () => {
   return (

@@ -1,15 +1,16 @@
 import React from "react";
 import Banner from "../components/Banner";
 import Collapse from "../components/Collapse";
+import Footer from "../components/Footer";
 
 const About = () => {
   return (
     <div>
       <Banner />
-      <div>
+      <div className="image-about">
         <img src="./IMG2.png" alt="montagne" />
       </div>
-      <div>
+      <div className="collapse-about-container">
         <Collapse label="Fiabilité">
           <p>
             Les annonces postées sur Kasa garantissent une fiabilité totale. Les
@@ -45,6 +46,7 @@ const About = () => {
           </p>
         </Collapse>
       </div>
+      <Footer />
     </div>
   );
 };
