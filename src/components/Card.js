@@ -16,9 +16,9 @@ const Card = (logement) => {
             src={logement.card.cover}
             alt={logement.card.title}
           />
-        </div>
-        <div className="card-name">
-          <h2>{logement.card.title}</h2>
+          <div className="card-name">
+            <h2>{logement.card.title}</h2>
+          </div>
         </div>
       </NavLink>
     </article>
