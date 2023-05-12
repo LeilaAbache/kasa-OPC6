@@ -58,15 +58,17 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(0deg, rgba(255,39,39,1) 0%, rgba(255,255,255,1) 100%);
+    background-image: linear-gradient(0deg, rgba(7,7,7,1) 0%, rgba(255,255,255,1) 100%);
     border-radius: 10px;
     z-index: 1;
-    opacity: 0.3; /* Dégradé visible par défaut */
-    /*transition: opacity 0.3s ease; /* Transition de 0.3s */
+    opacity: 0.5;
+    transition:  all 0.3s ease;
 }
-/*.card:hover::before {
-    opacity: 0; /* Dégradé invisible au survol
-}*/
+.card:hover::before {
+    transition: all 0.3s ease;
+    opacity: 0.2;
+    background-image: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,96,96,1) 25%, rgba(255,255,255,1) 100%);
+}
 .card img {
     position: relative;
     z-index: 0;
