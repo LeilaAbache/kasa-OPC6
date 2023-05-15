@@ -37,63 +37,78 @@ const FicheLogement = () => {
 
   return (
     <div>
-      <Banner />
-      <div>
-        {dataLogement.pictures.length > 1 ? (
-          <Slideshow pictures={dataLogement.pictures} />
-        ) : (
-          <img
-            src={dataLogement.pictures[0]}
-            alt={dataLogement.title}
-            className="image-solo"
-          />
-        )}
-        <br />
-        <div className="infos-logement-container">
-          <div className="title-location">
-            <h1>{dataLogement.title}</h1>
-            <p>{dataLogement.location}</p>
-          </div>
-          <div className="host-picture">
-            <p>{dataLogement.host.name}</p>
+      <div className="main">
+        <Banner />
+        <div className="page-logement">
+          {dataLogement.pictures.length > 1 ? (
+            <Slideshow pictures={dataLogement.pictures} />
+          ) : (
             <img
-              src={dataLogement.host.picture}
-              alt={dataLogement.host.name}
-              className="photo-host"
+              src={dataLogement.pictures[0]}
+              alt={dataLogement.title}
+              className="image-solo"
             />
+          )}
+          <br />
+          <div className="fiche-logement-container">
+            <div className="infos-logement-container">
+              <div className="title-location">
+                <h1>{dataLogement.title}</h1>
+                <p>{dataLogement.location}</p>
+              </div>
+              <div>
+                <ul className="tags">
+                  {dataLogement.tags.map((tag, index) => (
+                    <li key={index}>{tag}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <div className="host-star-container">
+              <div className="host-picture">
+                <p>{dataLogement.host.name}</p>
+                <img
+                  src={dataLogement.host.picture}
+                  alt={dataLogement.host.name}
+                  className="photo-host"
+                />
+              </div>
+              <div className="stars">
+                {tableauStars.map((star, index) => (
+                  <img
+                    key={index}
+                    src={
+                      star <= dataLogement.rating
+                        ? "./etoile-rose.png"
+                        : "./etoile-gris.png"
+                    }
+                    alt={
+                      star <= dataLogement.rating
+                        ? "étoile pleine"
+                        : "étoile vide"
+                    }
+                    className={
+                      star <= dataLogement.rating
+                        ? "etoile-pleine"
+                        : "etoile-vide"
+                    }
+                  />
+                ))}
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="infos-tag-star">
-          <div>
-            <ul className="tags">
-              {dataLogement.tags.map((tag, index) => (
-                <li key={index}>{tag}</li>
-              ))}
-            </ul>
+          <div className="collapse-fiche">
+            <Collapse label="Description">
+              <p>{dataLogement.description}</p>
+            </Collapse>
+            <Collapse label="Equipements">
+              <ul>
+                {dataLogement.equipments.map((equipement, index) => (
+                  <li key={index}>{equipement}</li>
+                ))}
+              </ul>
+            </Collapse>
           </div>
-          <div className="stars">
-            {tableauStars
-              .map((star) => {
-                if (star <= dataLogement.rating) {
-                  return "★";
-                } else {
-                  return "☆";
-                }
-              })
-              .join("")}
-          </div>
-        </div>
-        <div className="collapse-fiche">
-          <Collapse label="Description">
-            <p>{dataLogement.description}</p>
-          </Collapse>
-          <Collapse label="Equipements">
-            <ul>
-              {dataLogement.equipments.map((equipement, index) => (
-                <li key={index}>{equipement}</li>
-              ))}
-            </ul>
-          </Collapse>
         </div>
       </div>
       <Footer />

@@ -1,9 +1,12 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer className="footer">
-      <img src="./LOGO-Blanc.png" alt="logo"></img>
+      <NavLink to="/">
+        <img src="./LOGO-Blanc.png" alt="logo" className="logo-footer"></img>
+      </NavLink>
       <p>© 2020 Kasa. All rights reserved</p>
     </footer>
   );
