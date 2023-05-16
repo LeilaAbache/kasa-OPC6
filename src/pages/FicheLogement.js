@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import Banner from "../components/Banner";
 import axios from "axios";
-import Card from "../components/Card";
 import Erreur404 from "./Erreur404";
 import Collapse from "../components/Collapse";
 import Slideshow from "../components/Slideshow";
