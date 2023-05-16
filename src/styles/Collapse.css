@@ -1,0 +1,64 @@
+/* Composant Collapse */
+
+.collapse-button {
+    background-color:#FF6060;
+    color: white;
+    font-size: 20px;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    height: 55px;
+} 
+.collapse-button:hover {
+    filter: brightness(150%);
+    transition: filter 0.5s ease;
+}
+.collapse-icon {
+    font-size: 20px;
+    transition: transform 0.5s ease-out;
+    color:white;
+    transform: rotate(0deg);
+    width: 5%;
+    filter: brightness(0) invert(1);
+}
+.collapse-button.open .collapse-icon {
+    transform: rotate(-90deg);
+}  
+.collapse-content {
+    background-color:#F7F7F7;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+    width: 100%;
+    border-radius: 10px;
+} 
+.collapse-content.open {
+    max-height: 500px;
+    width: 100%;
+    transition: max-height 1s ease-in;
+}
+.collapse-content p{
+    padding: 10px;
+}
+
+
+@media screen and (max-width: 779px){
+
+.collapse-button {
+    font-size: 20px;
+    height: 45px;
+}
+}
+
+@media screen and (max-width: 400px){
+
+.collapse-button {
+    font-size: 18px;
+    height: 35px;
+}
+}

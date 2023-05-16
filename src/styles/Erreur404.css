@@ -1,0 +1,57 @@
+/* Page Erreur */
+
+.msg-erreur {
+    display: flex;
+    flex-direction: column;
+    margin: 100px 100px 200px 100px;
+}
+.msg-erreur h1 {
+    text-align: center;
+    font-size: 200px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+.msg-erreur p {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 0;
+}
+.msg-erreur a {
+    text-align: center;
+    text-decoration: underline;
+    padding: 10px;
+}
+
+
+@media screen and (max-width: 779px){
+
+.msg-erreur {
+    margin: 50px 50px 100px 50px;
+}
+.msg-erreur h1 {
+    font-size: 150px;
+}
+.msg-erreur p {
+    font-size: 20px;
+}
+}
+
+@media screen and (max-width: 550px){
+
+.msg-erreur h1 {
+    font-size: 100px;
+}
+.msg-erreur p {
+    font-size: 15px;
+}
+.lien-page-erreur {
+    font-size: 15px;
+}
+}
+
+@media screen and (max-width: 400px){
+
+.msg-erreur h1 {
+    font-size: 80px;
+}
+}

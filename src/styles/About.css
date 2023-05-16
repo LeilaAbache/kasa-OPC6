@@ -1,0 +1,56 @@
+/* Page About */
+
+.image-about {
+    margin-top: 50px;
+}
+.image-about img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    filter: brightness(80%);
+}
+.collapse-about-container {
+    margin-top: 50px;
+    margin-bottom: 600px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    width: 80%;
+    height: 100px;
+    border-radius: 5px;
+    align-items: center;
+    justify-items: center;
+    margin-left: 10%;
+    gap: 10%;
+}
+
+
+@media screen and (max-width: 1035px){
+
+.collapse-about-container {
+    width: 100%;
+    margin-left: 0;
+}
+}
+
+@media screen and (max-width: 779px){
+
+.collapse-about-container .collapse-icon {
+    width: 6%;
+}
+}
+
+@media screen and (max-width: 550px){
+
+.collapse-about-container .collapse-icon {
+    width: 9%;
+}
+}
+
+@media screen and (max-width: 400px){
+    
+.collapse-about-container .collapse-icon {
+    width: 12%;
+}
+}

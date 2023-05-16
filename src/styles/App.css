@@ -1,0 +1,39 @@
+/* Général */ 
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    color:#FF6060;
+}
+body {
+    margin: 0;
+    max-width: 1500px;
+}
+.main {
+    margin: 30px 70px 0px 70px;
+}
+a {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+@media screen and (max-width: 1200px) {
+    
+.main {
+    margin: 30px 40px 0px 40px;
+}
+}
+
+@media screen and (max-width: 779px) {
+
+.main {
+    margin: 20px 20px 0px 20px;
+}
+}
+
+@media screen and (max-width: 550px) {
+    
+.main {
+    margin: 15px 15px 0 15px;
+}
+}

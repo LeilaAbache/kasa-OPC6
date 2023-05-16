@@ -1,0 +1,64 @@
+/* Composant Banner */
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+}
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    gap: 50px;
+}
+.navigation li {
+    padding: 15px 10px 20px 10px; 
+}
+.active {
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width: 1200px) {
+
+.navigation {
+    margin-block-start: 0.5em;
+}
+}
+
+@media screen and (max-width: 779px){
+
+.navigation {
+    gap: 20px;
+    padding-inline-start: 0px;
+}
+.navigation li {
+    font-size: 16px;
+    text-transform:uppercase;
+}
+}
+
+@media screen and (max-width: 550px){
+
+.navigation {
+    gap: 10px;
+    margin-top: 12px;
+}
+.navigation li {
+    font-size: 14px;
+    padding: 5px 5px 10px 5px;
+}
+.banner {
+    gap: 10px;
+}
+}
+
+@media screen and (max-width: 400px){
+
+.navigation {
+    gap: 5px;
+}
+.navigation li {
+    font-size: 13px;
+    padding: 3px 2px 5px 3px;
+}
+}

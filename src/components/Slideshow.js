@@ -34,11 +34,13 @@ const Slideshow = ({ pictures }) => {
           </div>
         );
       })}
-      <div className="right-arrow" onClick={nextSlide}>
-        &#10095;
-      </div>
-      <div className="left-arrow" onClick={prevSlide}>
-        &#10094;
+      <div className="chevrons-slide">
+        <div className="right-arrow" onClick={nextSlide}>
+          <img src="./icone-slide-d.png" alt="flèche photo suivante" />
+        </div>
+        <div className="left-arrow" onClick={prevSlide}>
+          <img src="./icone-slide-g.png" alt="flèche photo précédente" />
+        </div>
       </div>
       <div className="counter">{`${currentSlide + 1} / ${totalSlides}`}</div>
     </section>
