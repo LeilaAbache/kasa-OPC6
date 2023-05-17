@@ -19,7 +19,7 @@ const Collapse = (props) => {
         <img
           className="collapse-icon"
           src="./chevron.png"
-          alt="icon"
+          alt="chevron déroulant"
           style={{ transform: open ? "rotate(-180deg)" : "" }}
         />
       </button>

@@ -9,7 +9,7 @@ const About = () => {
       <div className="main">
         <Banner />
         <div className="image-about">
-          <img src="./IMG2.png" alt="montagne" />
+          <img src="./image-page-about.png" alt="montagne" />
         </div>
         <div className="collapse-about-container">
           <Collapse label="Fiabilité">
@@ -30,7 +30,7 @@ const About = () => {
           <br />
           <Collapse label="Service">
             <p>
-              Nos éauipes se tiennent à votre disposition pour vous fournir une
+              Nos équipes se tiennent à votre disposition pour vous fournir une
               expérience parfaite. N'hésitez pas à nous contacter si vous avez
               la moindre question.
             </p>
@@ -42,7 +42,7 @@ const About = () => {
               pour les voyageurs, chaque logement correspond aux critères de
               sécurité établis par nos services. En laissant une note aussi bien
               à l'hôte qu'au locataire, cela permet à nos équipes de vérifier
-              aue les standards sont bien respectés. Nous organisons également
+              que les standards sont bien respectés. Nous organisons également
               des ateliers sur la sécurité domestique pour nos hôtes.
             </p>
           </Collapse>

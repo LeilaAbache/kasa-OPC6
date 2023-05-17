@@ -6,13 +6,13 @@
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.3), 
         rgba(0, 0, 0, 0.3)
-      ), url("../assets/IMG.png");
+      ), url("../../public/image-background-h1.png");
     background-size: cover;
     background-position: center;
     padding: 70px;
     font-size: 50px;
     text-align: center;
-    font-weight:400;
+    font-weight: 400;
     color: white;
     border-radius: 20px;
 }

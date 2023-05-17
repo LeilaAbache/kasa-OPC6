@@ -78,8 +78,8 @@ const FicheLogement = () => {
                     key={index}
                     src={
                       star <= dataLogement.rating
-                        ? "./etoile-rose.png"
-                        : "./etoile-gris.png"
+                        ? "./etoile-pleine.png"
+                        : "./etoile-vide.png"
                     }
                     alt={
                       star <= dataLogement.rating

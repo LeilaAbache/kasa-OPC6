@@ -1,7 +1,7 @@
 /* Composant Collapse */
 
 .collapse-button {
-    background-color:#FF6060;
+    background-color: #FF6060;
     color: white;
     font-size: 20px;
     border: none;
@@ -21,7 +21,7 @@
 .collapse-icon {
     font-size: 20px;
     transition: transform 0.5s ease-out;
-    color:white;
+    color: white;
     transform: rotate(0deg);
     width: 5%;
     filter: brightness(0) invert(1);
@@ -30,7 +30,7 @@
     transform: rotate(-90deg);
 }  
 .collapse-content {
-    background-color:#F7F7F7;
+    background-color: #F7F7F7;
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.5s ease-out;

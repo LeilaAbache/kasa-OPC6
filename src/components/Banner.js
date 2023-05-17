@@ -10,12 +10,15 @@ const Banner = () => {
       <Logo />
       <div>
         <ul className="navigation">
-          <NavLink to="/" className={location.pathname === "/" ? "active" : ""}>
+          <NavLink
+            to="/"
+            className={location.pathname === "/" ? "nav-active" : ""}
+          >
             <li>Accueil</li>
           </NavLink>
           <NavLink
             to="/about"
-            className={location.pathname === "/about" ? "active" : ""}
+            className={location.pathname === "/about" ? "nav-active" : ""}
           >
             <li>A propos</li>
           </NavLink>

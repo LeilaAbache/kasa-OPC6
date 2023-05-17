@@ -23,7 +23,7 @@
 
 .card-container {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     gap: 20px;
     background-color: white;
     padding: 0;

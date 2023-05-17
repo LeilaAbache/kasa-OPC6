@@ -27,7 +27,7 @@ const Slideshow = ({ pictures }) => {
             {index === currentSlide && (
               <img
                 src={imageSlide}
-                alt="image logement"
+                alt="détail logement"
                 className="image-slide"
               />
             )}
@@ -36,10 +36,10 @@ const Slideshow = ({ pictures }) => {
       })}
       <div className="chevrons-slide">
         <div className="right-arrow" onClick={nextSlide}>
-          <img src="./icone-slide-d.png" alt="flèche photo suivante" />
+          <img src="./icone-slide-d.png" alt="flèche suivant" />
         </div>
         <div className="left-arrow" onClick={prevSlide}>
-          <img src="./icone-slide-g.png" alt="flèche photo précédente" />
+          <img src="./icone-slide-g.png" alt="flèche précédent" />
         </div>
       </div>
       <div className="counter">{`${currentSlide + 1} / ${totalSlides}`}</div>
