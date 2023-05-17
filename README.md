@@ -1,3 +1,13 @@
+# Kasa : Projet OpenClassrooms
+
+Développement d'un site de location d'appartements entre particuliers.
+
+## Technologies
+
+- React
+- JS
+- CSS
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
