@@ -1,15 +1,17 @@
 import React, { useState } from "react";
+import chevrondroit from "../assets/icone-slide-d.png";
+import chevrongauche from "../assets/icone-slide-g.png";
 
 const Slideshow = ({ pictures }) => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [actuelSlide, setActuelSlide] = useState(0);
   const totalSlides = pictures.length;
 
   const nextSlide = () => {
-    setCurrentSlide(currentSlide === totalSlides - 1 ? 0 : currentSlide + 1);
+    setActuelSlide(actuelSlide === totalSlides - 1 ? 0 : actuelSlide + 1);
   };
 
   const prevSlide = () => {
-    setCurrentSlide(currentSlide === 0 ? totalSlides - 1 : currentSlide - 1);
+    setActuelSlide(actuelSlide === 0 ? totalSlides - 1 : actuelSlide - 1);
   };
 
   if (!Array.isArray(pictures) || pictures.length <= 0) {
@@ -20,11 +22,11 @@ const Slideshow = ({ pictures }) => {
       {pictures.map((imageSlide, index) => {
         return (
           <div
-            className={index === currentSlide ? "slide active" : "slide"}
+            className={index === actuelSlide ? "slide active" : "slide"}
             key={index}
           >
             {" "}
-            {index === currentSlide && (
+            {index === actuelSlide && (
               <img
                 src={imageSlide}
                 alt="détail logement"
@@ -36,13 +38,13 @@ const Slideshow = ({ pictures }) => {
       })}
       <div className="chevrons-slide">
         <div className="right-arrow" onClick={nextSlide}>
-          <img src="./icone-slide-d.png" alt="flèche suivant" />
+          <img src={chevrondroit} alt="flèche suivant" />
         </div>
         <div className="left-arrow" onClick={prevSlide}>
-          <img src="./icone-slide-g.png" alt="flèche précédent" />
+          <img src={chevrongauche} alt="flèche précédent" />
         </div>
       </div>
-      <div className="counter">{`${currentSlide + 1} / ${totalSlides}`}</div>
+      <div className="counter">{`${actuelSlide + 1} / ${totalSlides}`}</div>
     </section>
   );
 };

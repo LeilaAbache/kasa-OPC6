@@ -1,34 +1,45 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import Banner from "../components/Banner";
-import axios from "axios";
 import Erreur404 from "./Erreur404";
 import Collapse from "../components/Collapse";
 import Slideshow from "../components/Slideshow";
 import Footer from "../components/Footer";
+import etoilePleine from "../assets/etoile-pleine.png";
+import etoileVide from "../assets/etoile-vide.png";
 
 const FicheLogement = () => {
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
-    axios.get("logements.json").then((res) => setData(res.data));
+    let isMounted = true;
+
+    fetch("logements.json")
+      .then((response) => response.json())
+      .then((data) => {
+        if (isMounted) {
+          setData(data);
+          setLoading(false);
+        }
+      });
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   const [searchParams] = useSearchParams();
   const [idLogement] = useState(searchParams.get("_id"));
 
-  // cherche l'id dans le fichier logements.json
   const dataLogement = data.find((logement) => logement.id === idLogement);
 
-  // si l'URL à été modifié manuellement, redirection vers la page d'erreur
-  if (!dataLogement) return <Erreur404 />;
+  if (loading) {
+    return <div>Chargement en cours...</div>;
+  }
 
-  {
-    dataLogement.pictures.length > 1 ? (
-      <Slideshow pictures={dataLogement.pictures} />
-    ) : (
-      <img src={dataLogement.pictures[0]} alt={dataLogement.title} />
-    );
+  if (!dataLogement) {
+    return <Erreur404 />;
   }
 
   // Tableau des étoiles
@@ -77,9 +88,7 @@ const FicheLogement = () => {
                   <img
                     key={index}
                     src={
-                      star <= dataLogement.rating
-                        ? "./etoile-pleine.png"
-                        : "./etoile-vide.png"
+                      star <= dataLogement.rating ? etoilePleine : etoileVide
                     }
                     alt={
                       star <= dataLogement.rating
@@ -96,7 +105,7 @@ const FicheLogement = () => {
               </div>
             </div>
           </div>
-          <div className="collapse-fiche">
+          <div className="collapse-fiche-container">
             <Collapse label="Description">
               <p>{dataLogement.description}</p>
             </Collapse>

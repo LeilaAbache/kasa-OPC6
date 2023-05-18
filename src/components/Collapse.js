@@ -1,6 +1,7 @@
 import React from "react";
 import { useRef } from "react";
 import { useState } from "react";
+import chevron from "../assets/chevron.png";
 
 const Collapse = (props) => {
   const [open, setOPen] = useState(false);
@@ -18,7 +19,7 @@ const Collapse = (props) => {
         {props.label}
         <img
           className="collapse-icon"
-          src="./chevron.png"
+          src={chevron}
           alt="chevron déroulant"
           style={{ transform: open ? "rotate(-180deg)" : "" }}
         />

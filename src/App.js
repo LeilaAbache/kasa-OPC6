@@ -16,10 +16,12 @@ import "../src/styles/Footer.css";
 import "../src/styles/Home.css";
 import "../src/styles/Logo.css";
 import "../src/styles/Slideshow.css";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

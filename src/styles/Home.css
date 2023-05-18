@@ -6,7 +6,7 @@
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.3), 
         rgba(0, 0, 0, 0.3)
-      ), url("../../public/image-background-h1.png");
+      ), url("../assets/image-background-h1.png");
     background-size: cover;
     background-position: center;
     padding: 70px;

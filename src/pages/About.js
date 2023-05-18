@@ -2,6 +2,7 @@ import React from "react";
 import Banner from "../components/Banner";
 import Collapse from "../components/Collapse";
 import Footer from "../components/Footer";
+import imageAbout from "../assets/image-page-about.png";
 
 const About = () => {
   return (
@@ -9,7 +10,7 @@ const About = () => {
       <div className="main">
         <Banner />
         <div className="image-about">
-          <img src="./image-page-about.png" alt="montagne" />
+          <img src={imageAbout} alt="montagne" />
         </div>
         <div className="collapse-about-container">
           <Collapse label="Fiabilité">
