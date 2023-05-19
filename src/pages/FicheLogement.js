@@ -47,9 +47,9 @@ const FicheLogement = () => {
 
   return (
     <div>
-      <div className="main">
+      <main className="main">
         <Banner />
-        <div className="page-logement">
+        <article className="page-logement">
           {dataLogement.pictures.length > 1 ? (
             <Slideshow pictures={dataLogement.pictures} />
           ) : (
@@ -60,7 +60,7 @@ const FicheLogement = () => {
             />
           )}
           <br />
-          <div className="fiche-logement-container">
+          <section className="fiche-logement-container">
             <div className="infos-logement-container">
               <div className="title-location">
                 <h1>{dataLogement.title}</h1>
@@ -104,8 +104,8 @@ const FicheLogement = () => {
                 ))}
               </div>
             </div>
-          </div>
-          <div className="collapse-fiche-container">
+          </section>
+          <section className="collapse-fiche-container">
             <Collapse label="Description">
               <p>{dataLogement.description}</p>
             </Collapse>
@@ -116,9 +116,9 @@ const FicheLogement = () => {
                 ))}
               </ul>
             </Collapse>
-          </div>
-        </div>
-      </div>
+          </section>
+        </article>
+      </main>
       <Footer />
     </div>
   );

@@ -8,7 +8,7 @@ const Banner = () => {
   return (
     <div className="banner">
       <Logo />
-      <div>
+      <nav>
         <ul className="navigation">
           <NavLink
             to="/"
@@ -23,7 +23,7 @@ const Banner = () => {
             <li>A propos</li>
           </NavLink>
         </ul>
-      </div>
+      </nav>
     </div>
   );
 };

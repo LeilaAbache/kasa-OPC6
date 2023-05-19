@@ -7,12 +7,12 @@ import imageAbout from "../assets/image-page-about.png";
 const About = () => {
   return (
     <div>
-      <div className="main">
+      <main className="main">
         <Banner />
         <div className="image-about">
           <img src={imageAbout} alt="montagne" />
         </div>
-        <div className="collapse-about-container">
+        <section className="collapse-about-container">
           <Collapse label="Fiabilité">
             <p>
               Les annonces postées sur Kasa garantissent une fiabilité totale.
@@ -47,8 +47,8 @@ const About = () => {
               des ateliers sur la sécurité domestique pour nos hôtes.
             </p>
           </Collapse>
-        </div>
-      </div>
+        </section>
+      </main>
       <Footer />
     </div>
   );

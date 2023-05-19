@@ -10,7 +10,7 @@ const Card = (logement) => {
           search: "?_id=" + logement.card.id,
         }}
       >
-        <div className="card">
+        <section className="card">
           <img
             className="card-image"
             src={logement.card.cover}
@@ -19,7 +19,7 @@ const Card = (logement) => {
           <div className="card-name">
             <h2>{logement.card.title}</h2>
           </div>
-        </div>
+        </section>
       </NavLink>
     </article>
   );

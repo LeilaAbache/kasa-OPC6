@@ -6,13 +6,13 @@ import Footer from "../components/Footer";
 const Home = () => {
   return (
     <div>
-      <div className="main">
+      <main className="main">
         <Banner />
         <h1 className="titre-h1">
           Chez vous, <span className="span-h1">partout et ailleurs</span>
         </h1>
         <CardsLogements />
-      </div>
+      </main>
       <Footer />
     </div>
   );
