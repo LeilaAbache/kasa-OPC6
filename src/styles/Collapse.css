@@ -58,6 +58,7 @@
 @media screen and (max-width: 400px){
 
 .collapse-button {
+    border-radius: 7px;
     font-size: 18px;
     height: 35px;
 }

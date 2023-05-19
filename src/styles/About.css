@@ -36,6 +36,10 @@
 
 @media screen and (max-width: 779px){
 
+.image-about img{
+    height: 250px;
+    border-radius: 10px;
+}
 .collapse-about-container .collapse-icon {
     width: 6%;
 }
@@ -43,13 +47,21 @@
 
 @media screen and (max-width: 550px){
 
+.image-about img{
+    height: 300px;
+
+}
 .collapse-about-container .collapse-icon {
     width: 9%;
 }
 }
 
 @media screen and (max-width: 400px){
-    
+
+.image-about img{
+    height: 250px;
+}
+
 .collapse-about-container .collapse-icon {
     width: 12%;
 }
