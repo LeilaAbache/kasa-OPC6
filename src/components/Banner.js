@@ -12,6 +12,7 @@ const Banner = () => {
         <ul className="navigation">
           <NavLink
             to="/"
+            /* Applique la classe nav-active lorsque je suis sur la page accueil */
             className={location.pathname === "/" ? "nav-active" : ""}
           >
             <li>Accueil</li>

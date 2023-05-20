@@ -9,16 +9,20 @@ import etoilePleine from "../assets/etoile-pleine.png";
 import etoileVide from "../assets/etoile-vide.png";
 
 const FicheLogement = () => {
+  /* Création d'une variable data pour stocker les données du fetch */
   const [data, setData] = useState([]);
+  /* Création d'une variable loading initialisée à true pour afficher une page blanche de chargement en cours */
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    /* Création d'une variable isMounted pour vérifier que composant est bien monté avant de charger les données */
     let isMounted = true;
-
+    /* Récupération (GET) et stockage des données de logements.json */
     fetch("logements.json")
       .then((response) => response.json())
       .then((data) => {
         if (isMounted) {
+          /* Si le composant est bien monté, affichage des données récupérées et disparition de la page blanche de "chargement en cours" */
           setData(data);
           setLoading(false);
         }
@@ -29,15 +33,18 @@ const FicheLogement = () => {
     };
   }, []);
 
+  // Recherche de l'id dans l'URL & stockage dans la variable idLogement
   const [searchParams] = useSearchParams();
   const [idLogement] = useState(searchParams.get("_id"));
-
+  // Comparaison entre l'id de l'URL (idLogement) et les id stockés dans la variable "data"
+  // Récupération de l'id correspondant et stockage dans la variable "dataLogement"
   const dataLogement = data.find((logement) => logement.id === idLogement);
 
+  // La condition est demandée après la récupération de l'id pour eviter d'afficher la page 404 avant récupération
   if (loading) {
     return <div>Chargement en cours...</div>;
   }
-
+  // Si aucun id correspondant aux id de dataLogement, redirection vers erreur404
   if (!dataLogement) {
     return <Erreur404 />;
   }
@@ -85,9 +92,11 @@ const FicheLogement = () => {
               </div>
               <div className="stars">
                 {tableauStars.map((star, index) => (
+                  /* Parcourt le tableau des stars avec la méthode .map */
                   <img
                     key={index}
                     src={
+                      /* Comparaison avec la note attribuée dans rating, et attribution du nombre d'étoiles en fonction du nombre dans rating */
                       star <= dataLogement.rating ? etoilePleine : etoileVide
                     }
                     alt={
