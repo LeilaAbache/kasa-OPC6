@@ -20,6 +20,7 @@ import ScrollToTop from "../components/ScrollToTop";
 
 const App = () => {
   return (
+    /* Composants permettant la Navigation sur les pages du site */
     <BrowserRouter>
       <ScrollToTop />
       <Routes>
