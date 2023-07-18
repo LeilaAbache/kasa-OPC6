@@ -21,7 +21,7 @@ import ScrollToTop from "../components/ScrollToTop";
 const App = () => {
   return (
     /* Composants permettant la Navigation sur les pages du site */
-    <BrowserRouter>
+    <HashRouter>
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -29,7 +29,7 @@ const App = () => {
         <Route path="/fichelogement" element={<FicheLogement />} />
         <Route path="*" element={<Erreur404 />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
