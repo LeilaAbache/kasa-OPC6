@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import About from "../pages/About";
 import Erreur404 from "../pages/Erreur404";
 import FicheLogement from "../pages/FicheLogement";
